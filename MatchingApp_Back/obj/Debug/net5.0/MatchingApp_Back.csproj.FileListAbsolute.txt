@@ -1,0 +1,70 @@
+D:\Users\Lenovo\Desktop\Ramos Studies\projects\Mantu\MatchingApp\MatchingApp_Back\MatchingApp_Back\bin\Debug\net5.0\appsettings.Development.json
+D:\Users\Lenovo\Desktop\Ramos Studies\projects\Mantu\MatchingApp\MatchingApp_Back\MatchingApp_Back\bin\Debug\net5.0\appsettings.json
+D:\Users\Lenovo\Desktop\Ramos Studies\projects\Mantu\MatchingApp\MatchingApp_Back\MatchingApp_Back\bin\Debug\net5.0\MatchingApp_Back.exe
+D:\Users\Lenovo\Desktop\Ramos Studies\projects\Mantu\MatchingApp\MatchingApp_Back\MatchingApp_Back\bin\Debug\net5.0\MatchingApp_Back.deps.json
+D:\Users\Lenovo\Desktop\Ramos Studies\projects\Mantu\MatchingApp\MatchingApp_Back\MatchingApp_Back\bin\Debug\net5.0\MatchingApp_Back.runtimeconfig.json
+D:\Users\Lenovo\Desktop\Ramos Studies\projects\Mantu\MatchingApp\MatchingApp_Back\MatchingApp_Back\bin\Debug\net5.0\MatchingApp_Back.runtimeconfig.dev.json
+D:\Users\Lenovo\Desktop\Ramos Studies\projects\Mantu\MatchingApp\MatchingApp_Back\MatchingApp_Back\bin\Debug\net5.0\MatchingApp_Back.dll
+D:\Users\Lenovo\Desktop\Ramos Studies\projects\Mantu\MatchingApp\MatchingApp_Back\MatchingApp_Back\bin\Debug\net5.0\ref\MatchingApp_Back.dll
+D:\Users\Lenovo\Desktop\Ramos Studies\projects\Mantu\MatchingApp\MatchingApp_Back\MatchingApp_Back\bin\Debug\net5.0\MatchingApp_Back.pdb
+D:\Users\Lenovo\Desktop\Ramos Studies\projects\Mantu\MatchingApp\MatchingApp_Back\MatchingApp_Back\bin\Debug\net5.0\MatchingApp_Back.Views.dll
+D:\Users\Lenovo\Desktop\Ramos Studies\projects\Mantu\MatchingApp\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\MatchingApp_Back.csproj.AssemblyReference.cache
+D:\Users\Lenovo\Desktop\Ramos Studies\projects\Mantu\MatchingApp\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\MatchingApp_Back.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\Lenovo\Desktop\Ramos Studies\projects\Mantu\MatchingApp\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\MatchingApp_Back.AssemblyInfoInputs.cache
+D:\Users\Lenovo\Desktop\Ramos Studies\projects\Mantu\MatchingApp\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\MatchingApp_Back.AssemblyInfo.cs
+D:\Users\Lenovo\Desktop\Ramos Studies\projects\Mantu\MatchingApp\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\MatchingApp_Back.csproj.CoreCompileInputs.cache
+D:\Users\Lenovo\Desktop\Ramos Studies\projects\Mantu\MatchingApp\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\MatchingApp_Back.MvcApplicationPartsAssemblyInfo.cache
+D:\Users\Lenovo\Desktop\Ramos Studies\projects\Mantu\MatchingApp\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\staticwebassets\MatchingApp_Back.StaticWebAssets.Manifest.cache
+D:\Users\Lenovo\Desktop\Ramos Studies\projects\Mantu\MatchingApp\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\staticwebassets\MatchingApp_Back.StaticWebAssets.xml
+D:\Users\Lenovo\Desktop\Ramos Studies\projects\Mantu\MatchingApp\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\scopedcss\bundle\MatchingApp_Back.styles.css
+D:\Users\Lenovo\Desktop\Ramos Studies\projects\Mantu\MatchingApp\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\MatchingApp_Back.RazorTargetAssemblyInfo.cache
+D:\Users\Lenovo\Desktop\Ramos Studies\projects\Mantu\MatchingApp\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\MatchingApp_Back.dll
+D:\Users\Lenovo\Desktop\Ramos Studies\projects\Mantu\MatchingApp\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\ref\MatchingApp_Back.dll
+D:\Users\Lenovo\Desktop\Ramos Studies\projects\Mantu\MatchingApp\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\MatchingApp_Back.pdb
+D:\Users\Lenovo\Desktop\Ramos Studies\projects\Mantu\MatchingApp\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\MatchingApp_Back.genruntimeconfig.cache
+D:\Users\Lenovo\Desktop\Ramos Studies\projects\Mantu\MatchingApp\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\MatchingApp_Back.csproj.CopyComplete
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\bin\Debug\net5.0\appsettings.json
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\bin\Debug\net5.0\MatchingApp_Back.exe
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\bin\Debug\net5.0\MatchingApp_Back.deps.json
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\bin\Debug\net5.0\MatchingApp_Back.runtimeconfig.json
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\bin\Debug\net5.0\MatchingApp_Back.runtimeconfig.dev.json
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\bin\Debug\net5.0\MatchingApp_Back.dll
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\bin\Debug\net5.0\ref\MatchingApp_Back.dll
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\bin\Debug\net5.0\MatchingApp_Back.pdb
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\bin\Debug\net5.0\MatchingApp_Back.Views.dll
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\bin\Debug\net5.0\MatchingApp_Back.Views.pdb
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\MatchingApp_Back.csproj.AssemblyReference.cache
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\MatchingApp_Back.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\MatchingApp_Back.AssemblyInfoInputs.cache
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\MatchingApp_Back.AssemblyInfo.cs
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\MatchingApp_Back.csproj.CoreCompileInputs.cache
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\MatchingApp_Back.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\MatchingApp_Back.RazorAssemblyInfo.cache
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\MatchingApp_Back.RazorAssemblyInfo.cs
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\staticwebassets\MatchingApp_Back.StaticWebAssets.Manifest.cache
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\staticwebassets\MatchingApp_Back.StaticWebAssets.xml
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\scopedcss\bundle\MatchingApp_Back.styles.css
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\MatchingApp_Back.TagHelpers.input.cache
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\MatchingApp_Back.TagHelpers.output.cache
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\MatchingApp_Back.RazorCoreGenerate.cache
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\MatchingApp_Back.RazorTargetAssemblyInfo.cache
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\MatchingApp_Back.RazorTargetAssemblyInfo.cs
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\MatchingApp_Back.Views.pdb
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\MatchingApp_Back.dll
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\ref\MatchingApp_Back.dll
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\MatchingApp_Back.pdb
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\MatchingApp_Back.genruntimeconfig.cache
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\obj\Debug\net5.0\MatchingApp_Back.csproj.CopyComplete
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\bin\Debug\net5.0\Elasticsearch.Net.dll
+C:\Users\mahdi\Source\Repos\MatchingApp_Back\MatchingApp_Back\bin\Debug\net5.0\Nest.dll
+D:\Users\Lenovo\Desktop\Ramos Studies\projects\Mantu\MatchingApp\MatchingApp_Back\MatchingApp_Back\bin\Debug\net5.0\Elasticsearch.Net.dll
+D:\Users\Lenovo\Desktop\Ramos Studies\projects\Mantu\MatchingApp\MatchingApp_Back\MatchingApp_Back\bin\Debug\net5.0\Nest.dll
+D:\Users\Lenovo\Desktop\Ramos Studies\projects\Mantu\MatchingApp\MatchingApp_Back\MatchingApp_Back\bin\Debug\net5.0\MatchingApp_Back.Views.pdb
