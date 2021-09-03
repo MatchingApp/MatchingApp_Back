@@ -240,11 +240,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Users\\Lenovo\\Desktop\\Ramos Studies\\projects\\Mantu\\MatchingApp\\MatchingApp_Back\\MatchingApp_Back\\MatchingApp_Back.csproj",
+      "projectUniqueName": "D:\\Users\\Lenovo\\Desktop\\Ramos Studies\\projects\\MatchingApp\\MatchingApp_Back\\MatchingApp_Back\\MatchingApp_Back.csproj",
       "projectName": "MatchingApp_Back",
-      "projectPath": "D:\\Users\\Lenovo\\Desktop\\Ramos Studies\\projects\\Mantu\\MatchingApp\\MatchingApp_Back\\MatchingApp_Back\\MatchingApp_Back.csproj",
+      "projectPath": "D:\\Users\\Lenovo\\Desktop\\Ramos Studies\\projects\\MatchingApp\\MatchingApp_Back\\MatchingApp_Back\\MatchingApp_Back.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "D:\\Users\\Lenovo\\Desktop\\Ramos Studies\\projects\\Mantu\\MatchingApp\\MatchingApp_Back\\MatchingApp_Back\\obj\\",
+      "outputPath": "D:\\Users\\Lenovo\\Desktop\\Ramos Studies\\projects\\MatchingApp\\MatchingApp_Back\\MatchingApp_Back\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -21,5 +21,8 @@ namespace MatchingApp_Back.Models
         public string Skills { get; set; }
         public string Title { get; set; }
         public string Photo { get; set; }
+
+        public double? Score { get; set; }
+
     }
 }

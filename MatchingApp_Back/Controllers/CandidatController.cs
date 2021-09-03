@@ -16,7 +16,9 @@ public class Search
     public string Title { get; set; }
     public string Skills { get; set; }
     public string Location { get; set; }
-    public string Experience { get; set; }
+    public int MinExperience { get; set; }
+    public int MaxExperience { get; set; }
+
     public string Bio { get; set; }
 }
 namespace MatchingApp_Back.Controllers
@@ -48,6 +50,64 @@ namespace MatchingApp_Back.Controllers
            .Query(q => q.Term(t => t.Name, name) ||
            q.Match(m => m.Field(f => f.Name).Query(name))));
             return response?.Documents;
+        } 
+        
+        [HttpGet("score", Name = "GetScore")]
+       
+        public  ActionResult GetScore( )
+        {
+            // var response = await elasticClient.SearchAsync<Candidat>(s => s
+            //.Query(q => q.Term(t => t.Name, ) ||
+            //q.Match(m => m.Field(f => f.Name).Query())));
+            var response =  elasticClient.Search<Candidat>(q => q
+                  .Index("candidats")
+                        .Query(q => q
+                            //.Fuzzy(c => c
+                            //    .Field(p => p.Bio)
+                            //    .Value("learn")
+                            //    )
+
+
+                            .MoreLikeThis(sn => sn
+                                .Like(l => l
+                                    .Text("ramez")
+                                )
+                                .Analyzer("some_analyzer")
+                                .BoostTerms(1.1)
+                                .Include()
+                                .MaxDocumentFrequency(12)
+                                .MaxQueryTerms(12)
+                                .MaxWordLength(300)
+                                .MinDocumentFrequency(1)
+                                .MinTermFrequency(1)
+                                .MinWordLength(10)
+                                .MinimumShouldMatch(1)
+                                .Fields(f => f.Field(p => p.Name))
+                                .Unlike(l => l
+                                    .Text("not like this text")
+                                )
+                                )
+
+
+                            //.Range(c => c
+                            //   .Field(p => p.Experience)
+                            //   .GreaterThanOrEquals(4)
+                            //   .LessThanOrEquals(20)
+                            //   )
+                            //|| q.Match(m => m.Field(f => f.Skills).Query("css html"))
+
+                            )
+                 );
+            var results = response.Documents;
+            var maxScore = response.MaxScore;
+            var hits = response.Hits;
+            foreach (Candidat result in results)
+            {
+        
+                int index = results.ToList().FindIndex(m=> m.Id == result.Id);
+                result.Score = Math.Round((hits.ToList()[index].Score * 100 / maxScore).Value, 2) ; 
+            }
+            return Ok(results);
         }
 
         // [HttpGet("match/{​​​skills}​​​/{​​​min}​​​", Name = "GetBySkills")]
@@ -60,22 +120,35 @@ namespace MatchingApp_Back.Controllers
 
 
         [HttpPost("search", Name = "SearchCandidats")]
-        public async Task<IEnumerable<Candidat>> SearchCandidats(Search value)
+        public  ActionResult SearchCandidats(Search value)
         {
            
-            var response = await elasticClient.SearchAsync<Candidat>
+            var response =  elasticClient.Search<Candidat>
                 (s => s
                 .Query(q => q
                      .Bool(b => b
                             .Must(
                                 m => m.Term(p => p.Title, value.Title),
-                                m => m.Match(m => m.Field(f => f.Skills).Query(value.Skills)) ,
-                                m => m.Match(m => m.Field(f => f.Address).Query(value.Location)),
-                                m => m.Term(p => p.Experience, value.Experience),
-                                m => m.Term(p => p.Bio, value.Bio)
+                                m => m.Match(m => m.Field(f => f.Skills).Query(value.Skills)),
+                                m => m.Match(m => m.Field(f => f.Address).Query(value.Location))
+                                //m => m.Term(p => p.Bio, value.Bio)
                                 )
                             .Should(
-                                bs => bs.Term(p => p.Name,value.Should)
+                                q => q
+                                .Range(c => c
+                                   .Field(p => p.Experience)
+                                   .GreaterThanOrEquals(value.MinExperience)
+                                   .LessThanOrEquals(value.MaxExperience)
+                                   ),
+                                q => q.Fuzzy(c => c
+                                    .Field(p => p.Bio)
+                                    .Fuzziness(Fuzziness.Auto)
+                                    .Value("lea")
+                                    .MaxExpansions(100)
+                                    .PrefixLength(3)
+                                    .Rewrite(MultiTermQueryRewrite.ConstantScore)
+                                    .Transpositions())
+
                                 )
                             .MustNot(
                                bs => bs.Term(p => p.Skills, value.MustNot)
@@ -87,9 +160,17 @@ namespace MatchingApp_Back.Controllers
                      )
                 );
 
+            var results = response.Documents;
+            var maxScore = response.MaxScore;
+            var hits = response.Hits;
+            foreach (Candidat result in results)
+            {
 
-
-            return response?.Documents;
+                int index = results.ToList().FindIndex(m => m.Id == result.Id);
+                result.Score = Math.Round((hits.ToList()[index].Score * 100 / maxScore).Value, 2);
+            }
+          
+            return Ok(results);
         }
 
 
