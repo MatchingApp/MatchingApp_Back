@@ -22,7 +22,7 @@ namespace MatchingApp_Back.Models
         public string Title { get; set; }
         public string Photo { get; set; }
 
-        public double? Score { get; set; }
+        public double? Score { get; set; } = null;
 
     }
 }

@@ -56,48 +56,63 @@ namespace MatchingApp_Back.Controllers
        
         public  ActionResult GetScore( )
         {
+
+            var response = elasticClient.Search<Candidat>(s => s
+          .Index("candidats")
+          .Query(esQuery => esQuery
+              .MoreLikeThis(mlt => mlt
+                      .Include(true)
+                      .Fields(f => f.Field(ff => ff.Skills))
+                      .Like(l => l
+                      .Text("css html angular")
+                      )
+                      .MinTermFrequency(1)
+                      .MinDocumentFrequency(1)
+              ) 
+          )
+      );
             // var response = await elasticClient.SearchAsync<Candidat>(s => s
             //.Query(q => q.Term(t => t.Name, ) ||
             //q.Match(m => m.Field(f => f.Name).Query())));
-            var response =  elasticClient.Search<Candidat>(q => q
-                  .Index("candidats")
-                        .Query(q => q
-                            //.Fuzzy(c => c
-                            //    .Field(p => p.Bio)
-                            //    .Value("learn")
-                            //    )
+            //var response =  elasticClient.Search<Candidat>(q => q
+            //      .Index("candidats")
+            //            .Query(q => q
+            //                //.Fuzzy(c => c
+            //                //    .Field(p => p.Bio)
+            //                //    .Value("learn")
+            //                ////    )
 
 
-                            .MoreLikeThis(sn => sn
-                                .Like(l => l
-                                    .Text("ramez")
-                                )
-                                .Analyzer("some_analyzer")
-                                .BoostTerms(1.1)
-                                .Include()
-                                .MaxDocumentFrequency(12)
-                                .MaxQueryTerms(12)
-                                .MaxWordLength(300)
-                                .MinDocumentFrequency(1)
-                                .MinTermFrequency(1)
-                                .MinWordLength(10)
-                                .MinimumShouldMatch(1)
-                                .Fields(f => f.Field(p => p.Name))
-                                .Unlike(l => l
-                                    .Text("not like this text")
-                                )
-                                )
+            //                .MoreLikeThis(sn => sn
+            //                    .Like(l => l
+            //                        .Text("css html   ")
+            //                    )
+            //                   .Fields(f => f.Field(p => p.Skills))
+            //                    //.Analyzer("some_analyzer")
+            //                    //.BoostTerms(1.1)
+            //                    //.Include()
+            //                    //.MaxDocumentFrequency(12)
+            //                    //.MaxQueryTerms(12)
+            //                    //.MaxWordLength(300)
+            //                    //.MinDocumentFrequency(1)
+            //                    //.MinTermFrequency(1)
+            //                    //.MinWordLength(10)
+            //                    //.MinimumShouldMatch(1)
 
+            //                    //.Unlike(l => l
+            //                    //    .text("not like this text")
 
-                            //.Range(c => c
-                            //   .Field(p => p.Experience)
-                            //   .GreaterThanOrEquals(4)
-                            //   .LessThanOrEquals(20)
-                            //   )
-                            //|| q.Match(m => m.Field(f => f.Skills).Query("css html"))
+            //                    )
+            //                //    ) &&
+            //                //    q .Range(c => c
+            //                //   .Field(p => p.Experience)
+            //                //   .GreaterThanOrEquals(4)
+            //                //   .LessThanOrEquals(20)
+            //                //   )
+            //                //&& q.Match(m => m.Field(f => f.Skills).Query("css html"))
 
-                            )
-                 );
+            //                )
+            //     );
             var results = response.Documents;
             var maxScore = response.MaxScore;
             var hits = response.Hits;
@@ -108,6 +123,25 @@ namespace MatchingApp_Back.Controllers
                 result.Score = Math.Round((hits.ToList()[index].Score * 100 / maxScore).Value, 2) ; 
             }
             return Ok(results);
+        }
+        
+        
+        [HttpGet("skills", Name = "GetSkills")]
+       
+        public   ActionResult GetSkills( )
+        {
+            string[] skills = { };
+            var response =  elasticClient.Search<Candidat>(s =>
+            s.Size(100));
+            var results = response.Documents;
+
+            foreach (Candidat result in results)
+            {
+                string[] newSkills =  result.Skills.Split(" ");
+                skills = skills.Concat(newSkills).Distinct().ToArray();
+            }
+
+            return Ok(skills);
         }
 
         // [HttpGet("match/{​​​skills}​​​/{​​​min}​​​", Name = "GetBySkills")]
@@ -130,7 +164,17 @@ namespace MatchingApp_Back.Controllers
                             .Must(
                                 m => m.Term(p => p.Title, value.Title),
                                 m => m.Match(m => m.Field(f => f.Skills).Query(value.Skills)),
-                                m => m.Match(m => m.Field(f => f.Address).Query(value.Location))
+                                m => m.Match(m => m.Field(f => f.Address).Query(value.Location)),
+                                q => q.MoreLikeThis(mlt => mlt
+                                          .Include(true)
+                                          .Fields(f => f.Field(ff => ff.Bio))
+                                          .Like(l => l
+                                          .Text(value.Bio)
+                                          )
+                                          .MinTermFrequency(1)
+                                          .MinDocumentFrequency(1)
+                                         )
+                               
                                 //m => m.Term(p => p.Bio, value.Bio)
                                 )
                             .Should(
@@ -143,16 +187,17 @@ namespace MatchingApp_Back.Controllers
                                 q => q.Fuzzy(c => c
                                     .Field(p => p.Bio)
                                     .Fuzziness(Fuzziness.Auto)
-                                    .Value("lea")
+                                    .Value(value.Bio)
                                     .MaxExpansions(100)
                                     .PrefixLength(3)
                                     .Rewrite(MultiTermQueryRewrite.ConstantScore)
                                     .Transpositions())
+                                
 
                                 )
-                            .MustNot(
-                               bs => bs.Term(p => p.Skills, value.MustNot)
-                                )
+                            //.MustNot(
+                            //   bs => bs.Term(p => p.Skills, value.MustNot)
+                            //    )
                             //.Filter(f => f.MatchAll())
                             //.MinimumShouldMatch(1)
     
