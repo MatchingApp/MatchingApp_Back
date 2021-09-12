@@ -234,30 +234,30 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lenovo\\.nuget\\packages\\": {},
+    "C:\\Users\\mahdi\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Users\\Lenovo\\Desktop\\Ramos Studies\\projects\\Mantu\\MatchingApp\\MatchingApp_Back\\MatchingApp_Back\\MatchingApp_Back.csproj",
+      "projectUniqueName": "C:\\Users\\mahdi\\Source\\Repos\\MatchingApp_Back\\MatchingApp_Back\\MatchingApp_Back.csproj",
       "projectName": "MatchingApp_Back",
-      "projectPath": "D:\\Users\\Lenovo\\Desktop\\Ramos Studies\\projects\\Mantu\\MatchingApp\\MatchingApp_Back\\MatchingApp_Back\\MatchingApp_Back.csproj",
-      "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "D:\\Users\\Lenovo\\Desktop\\Ramos Studies\\projects\\Mantu\\MatchingApp\\MatchingApp_Back\\MatchingApp_Back\\obj\\",
+      "projectPath": "C:\\Users\\mahdi\\Source\\Repos\\MatchingApp_Back\\MatchingApp_Back\\MatchingApp_Back.csproj",
+      "packagesPath": "C:\\Users\\mahdi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mahdi\\Source\\Repos\\MatchingApp_Back\\MatchingApp_Back\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mahdi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -299,7 +299,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

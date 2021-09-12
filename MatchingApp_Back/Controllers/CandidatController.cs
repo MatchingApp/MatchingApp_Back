@@ -121,5 +121,43 @@ namespace MatchingApp_Back.Controllers
             var response = await elasticClient.DeleteAsync<Candidat>(id, x => x.Index("candidats"));
             return response;
         }
+
+        [HttpGet("mlt/{description}", Name = "GetByMLT")]
+
+        public async Task<IEnumerable<Candidat>> GetByMlt(string description)
+        {
+            var candidat = new Candidat();
+     
+            candidat.Skills = description;
+            var response = await elasticClient.SearchAsync<Candidat>(s => s
+            .Query( q => q.
+            MoreLikeThis(sn => sn
+             .Fields(f => f
+                .Field(p => p.Skills)
+                )
+            .Like( l => l
+            .Text(description))
+
+            )));
+            return response?.Documents;
+        }
+
+        [HttpGet("fuzzy/{description}", Name = "GetFuzzy")]
+
+        public async Task<IEnumerable<Candidat>> GetFuzzy(string description)
+        {
+            var response = await elasticClient.SearchAsync<Candidat>(s => s
+            .Query(q => q.
+            Fuzzy(c => c
+            .Field( f => f.Skills)
+            .Fuzziness(Fuzziness.Auto)
+            .Value(description)
+            .Transpositions()
+            .MaxExpansions(100)
+            .PrefixLength(3)
+            )
+           ));
+            return response?.Documents;
+        }
     }
 }
