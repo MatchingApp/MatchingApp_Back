@@ -161,11 +161,29 @@ namespace MatchingApp_Back.Controllers
                 (s => s
                 .Query(q => q
                      .Bool(b => b
-                            .Must(
+                            //.Must(
+                            //    m => m.Term(p => p.Title, value.Title),
+                            //    m => m.Match(m => m.Field(f => f.Skills).Query(value.Skills)),
+                            //    m => m.Match(m => m.Field(f => f.Address).Query(value.Location)),
+                            //    q => q.MoreLikeThis(mlt => mlt
+                            //              .Include(true)
+                            //              .Fields(f => f.Field(ff => ff.Bio))
+                            //              .Like(l => l
+                            //              .Text(value.Bio)
+                            //              )
+                            //              .MinTermFrequency(1)
+                            //              .MinDocumentFrequency(1)
+                            //             )
+                               
+                            //    //m => m.Term(p => p.Bio, value.Bio)
+                            //    )
+                            .Should(
+
+
                                 m => m.Term(p => p.Title, value.Title),
                                 m => m.Match(m => m.Field(f => f.Skills).Query(value.Skills)),
                                 m => m.Match(m => m.Field(f => f.Address).Query(value.Location)),
-                                q => q.MoreLikeThis(mlt => mlt
+                                 q => q.MoreLikeThis(mlt => mlt
                                           .Include(true)
                                           .Fields(f => f.Field(ff => ff.Bio))
                                           .Like(l => l
@@ -173,11 +191,8 @@ namespace MatchingApp_Back.Controllers
                                           )
                                           .MinTermFrequency(1)
                                           .MinDocumentFrequency(1)
-                                         )
-                               
-                                //m => m.Term(p => p.Bio, value.Bio)
-                                )
-                            .Should(
+                                         ),
+
                                 q => q
                                 .Range(c => c
                                    .Field(p => p.Experience)
